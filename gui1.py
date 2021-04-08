@@ -172,7 +172,7 @@ def mail(mailId,message,successMessage):
 
         s.starttls()
 
-        s.login("kkeyan9322@gmail.com", "Amiami@143")
+        s.login("YOUR_EMAILID", "PASSWORD")
 
         s.sendmail("kkeyan9322@gmail.com", mailId.get(), message.get("1.0", "end-1c").strip())
 
