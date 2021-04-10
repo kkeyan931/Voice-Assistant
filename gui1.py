@@ -188,8 +188,12 @@ def volume(command):
     while not valid:
         volume = input('What volume? > ')
 
+<<<<<<< HEAD
         try:
             volume = int(volume)
+=======
+        s.login("YOUR_EMAILID", "PASSWORD")
+>>>>>>> c2b9d702104c23e6498f97eb3d64f9a1ba6e844e
 
             if (volume <= 100) and (volume >= 0):
                 subprocess.call(["amixer", "-D", "pulse", "sset", "Master", str(volume) + "%"])
