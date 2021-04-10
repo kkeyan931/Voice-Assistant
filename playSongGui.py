@@ -1,10 +1,14 @@
 from tkinter import *
+from tkinter import filedialog
+
 import pygame
 import os
 
 
 class MusicPlayer:
     def __init__(self, root):
+        filename = filedialog.askdirectory(title="Select a Folder")
+
         self.root = root
 
         self.root.title("MusicPlayer")
@@ -68,7 +72,7 @@ class MusicPlayer:
         scrol_y.pack(side=RIGHT, fill=Y)
         scrol_y.config(command=self.playlist.yview)
         self.playlist.pack(fill=BOTH)
-        os.chdir("songs")
+        os.chdir(filename)
         songtracks = os.listdir()
         for track in songtracks:
             self.playlist.insert(END, track)
